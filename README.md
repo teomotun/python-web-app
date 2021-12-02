@@ -7,7 +7,7 @@ Python app for CI CD
 
 ## Clone the repo 
 ```sh
-git clone https://github.com/singh-ashok25/python-web-app.git
+git clone https://github.com/teomotun/python-web-app.git
 cd python-web-app
 ```
 
