@@ -59,7 +59,7 @@ docker rmi $IMAGE_NAME
 ```
 
 
-## On Kenkins CentOS Instance
+## On Jenkins CentOS Instance
 ```
 #### Install docker
 sudo yum install -y yum-utils -y
