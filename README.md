@@ -49,3 +49,23 @@ docker stop $CONTAINER_NAME
 docker rm $CONTAINER_NAME
 docker rmi $IMAGE_NAME
 ```
+
+
+## On Kenkins CentOS Instance
+```
+#### Install docker
+sudo yum install -y yum-utils
+sudo yum-config-manager \
+    --add-repo \
+    https://download.docker.com/linux/centos/docker-ce.repo
+sudo yum install docker-ce docker-ce-cli containerd.io -y
+sudo systemctl start docker
+sudo systemctl enable docker
+
+#### check what groups jenkins is part of on jenkins server
+sudo groups jenkins
+#### Add the jenkins user to docker group
+sudo usermod -aG docker jenkins 
+#### reboot server so all permissions will be in place
+sudo reboot
+```
