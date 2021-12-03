@@ -33,12 +33,12 @@ pytest
 #### Build Steps
 ```
 IMAGE_NAME="python-web-app-image"
-CONTAINER_NAME="python-web-app-container"
+CONTAINER_NAME="omotundetolu1/python-web-app-container:0.0.1"
 echo "Check current working directory"
 pwd
 echo "Build docker image and run container"
 docker build -t $IMAGE_NAME .
-docker run -d --name $CONTAINER_NAME $IMAGE_NAME
+docker run -dit -p 5000:5000 --name $CONTAINER_NAME $IMAGE_NAME
 echo "Copy result.xml into Jenkins container"
 rm -rf reports; mkdir reports
 docker cp $CONTAINER_NAME:/code/reports/result.xml reports/
