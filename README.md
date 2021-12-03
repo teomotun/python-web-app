@@ -49,7 +49,7 @@ docker build -t $IMAGE_NAME .
 docker run -d --name $CONTAINER_NAME $IMAGE_NAME
 echo "Copy result.xml into Jenkins container"
 rm -rf reports; mkdir reports
-docker cp $CONTAINER_NAME:/python-test-calculator/reports/result.xml reports/
+docker cp $CONTAINER_NAME:/code/reports/result.xml reports/
 echo "Cleanup"
 
 ### If not post-build action
