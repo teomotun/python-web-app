@@ -42,9 +42,11 @@ docker run -dit -p 5000:5000 --name $CONTAINER_NAME $IMAGE_NAME
 echo "Copy result.xml into Jenkins container"
 rm -rf reports; mkdir reports
 docker cp $CONTAINER_NAME:/code/reports/result.xml reports/
-echo "Cleanup"
+cat reports/result.xml
+
 
 ### If not post-build action
+echo "Cleanup"
 docker stop $CONTAINER_NAME
 docker rm $CONTAINER_NAME
 docker rmi $IMAGE_NAME
