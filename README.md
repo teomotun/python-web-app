@@ -32,12 +32,14 @@ pytest
 ## Running as a container
 #### Build Steps
 ```
+IMAGE_NAME="python-web-app-image"
+CONTAINER_NAME="python-web-app-container"
+
 echo "Cleanup images and container if they exist"
 docker stop $CONTAINER_NAME
 docker rm $CONTAINER_NAME
 docker rmi $IMAGE_NAME
-IMAGE_NAME="python-web-app-image"
-CONTAINER_NAME="python-web-app-container"
+
 echo "Check current working directory"
 pwd
 echo "Build docker image and run container"
