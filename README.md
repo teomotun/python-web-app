@@ -39,6 +39,7 @@ pytest
 
 
 ## Build Steps
+```
 IMAGE_NAME="python-web-app-image"
 CONTAINER_NAME="python-web-app-container"
 echo "Check current working directory"
@@ -55,4 +56,4 @@ echo "Cleanup"
 docker stop $CONTAINER_NAME
 docker rm $CONTAINER_NAME
 docker rmi $IMAGE_NAME
-
+```
