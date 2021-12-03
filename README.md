@@ -32,7 +32,6 @@ pytest
 ## Running as a container
 #### Build Steps
 ```
-cd python-web-app
 IMAGE_NAME="python-web-app-image"
 CONTAINER_NAME="python-web-app-container"
 echo "Check current working directory"
