@@ -54,10 +54,10 @@ docker rmi $IMAGE_NAME
 ## On Kenkins CentOS Instance
 ```
 #### Install docker
-sudo yum install -y yum-utils
+sudo yum install -y yum-utils -y
 sudo yum-config-manager \
     --add-repo \
-    https://download.docker.com/linux/centos/docker-ce.repo
+    https://download.docker.com/linux/centos/docker-ce.repo -y
 sudo yum install docker-ce docker-ce-cli containerd.io -y
 sudo systemctl start docker
 sudo systemctl enable docker
