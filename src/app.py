@@ -1,11 +1,15 @@
-from flask import Flask
+from flask import Flask, render_template, redirect
 
-app = Flask(__name__)
+app = Flask(__name__)	
 
-@app.route("/")
+@app.route('/')
+def home():
+	return render_template('index.html')
 
-def index():
-    return "Hello, World!"
-
-if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=5000)
+@app.route('/days/')
+def days():
+        return render_template('days.html')
+	
+	
+if __name__ == '__main__':
+	app.run(debug=True, host="0.0.0.0", port=5000)
