@@ -33,7 +33,7 @@ pytest
 #### Build Steps
 ```
 IMAGE_NAME="python-web-app-image"
-CONTAINER_NAME="omotundetolu1/python-web-app-container:0.0.1"
+CONTAINER_NAME="python-web-app-container:0.0.1"
 echo "Check current working directory"
 pwd
 echo "Build docker image and run container"
