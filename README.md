@@ -4,18 +4,15 @@ Python app for CI CD
 
 
 
-
-## Clone the repo 
+## Running Locally
+#### Clone the repo 
 ```sh
 git clone https://github.com/teomotun/python-web-app.git
 cd python-web-app
 ```
 
 
-
-
-
-## Setup virtual env and install requirements
+#### Setup virtual env and install requirements
 ```sh    
 python3 -m venv venv
 source venv/bin/activate
@@ -24,11 +21,7 @@ pip install -r requirements.txt
 ```
 
 
-
-
-
-
-## 
+#### 
 ```sh
 python3 src/app.py 
 curl http://127.0.0.1:5000/ 
@@ -36,9 +29,8 @@ export PYTHONPATH=src
 pytest
 ```
 
-
-
-## Build Steps
+## Running as a container
+#### Build Steps
 ```
 IMAGE_NAME="python-web-app-image"
 CONTAINER_NAME="python-web-app-container"
