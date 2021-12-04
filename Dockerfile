@@ -10,6 +10,5 @@ COPY . .
 EXPOSE 5000
 RUN cp -a src/* tests
 RUN ["pytest", "-v", "--junitxml=reports/result.xml"]
-# ENTRYPOINT ["python"]
-# CMD ["src/app.py"]
-CMD ["flask", "run"]
+ENTRYPOINT ["python"]
+CMD ["src/app.py"]
