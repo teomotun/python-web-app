@@ -35,11 +35,6 @@ pytest
 IMAGE_NAME="python-web-app-image"
 CONTAINER_NAME="python-web-app-container"
 
-echo "Cleanup images and container if they exist"
-docker stop $CONTAINER_NAME
-docker rm $CONTAINER_NAME
-docker rmi $IMAGE_NAME
-
 echo "Check current working directory"
 pwd
 echo "Build docker image and run container"
@@ -59,7 +54,7 @@ docker rmi $IMAGE_NAME
 ```
 
 
-## On Kenkins CentOS Instance
+## On Jenkins CentOS Instance
 ```
 #### Install docker
 sudo yum install -y yum-utils -y
