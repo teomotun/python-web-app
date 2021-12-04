@@ -4,7 +4,7 @@ def test_home():
     response = app.test_client().get('/')
 
     assert response.status_code == 200
-    welcome_present = b"Welcome!" in response.data
+    welcome_present = b"Welcomeere!" in response.data
     assert welcome_present == True
 
 def test_days():
